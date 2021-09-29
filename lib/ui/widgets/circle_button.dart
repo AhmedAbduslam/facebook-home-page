@@ -1,14 +1,13 @@
-import 'package:feedbook/ui/colors.dart';
+import 'package:feedbook/ui/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CircleButton extends StatelessWidget {
   final IconData icon;
-  final double? iconSize;
   final void Function() onPressed;
 
   const CircleButton({
     required this.icon,
-    this.iconSize,
     required this.onPressed,
   });
 
@@ -21,7 +20,7 @@ class CircleButton extends StatelessWidget {
       ),
       child: IconButton(
         padding: const EdgeInsets.all(0.0),
-        icon: Icon(icon),
+        icon: FaIcon(icon),
         color: Colors.black,
         onPressed: onPressed,
       ),

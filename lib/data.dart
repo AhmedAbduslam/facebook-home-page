@@ -133,73 +133,146 @@ final List<Story> stories = [
   // ),
 ];
 
-final List<Post> posts = [
-  Post(
-    id: '123',
-    user: users[4],
-    text:
-        'Hello, everyone. I need help for the Arabic translation of an English  sentence:\n"It\'s one thing to think you\'re on the right path, but it\'s another to think that yours is the only path\" \nMy proposal: \n \"شيء أن ترى أنك في الطريق الصحيح، وشيء آخر أن ترى أن طريقك هو الطريق الوحيد\" \n Is it OK\?',
-    postDate: DateTime(2021, 9, 11, 20, 33),
-    likers: [users[0], users[3]],
-    comments: 37,
-    shares: 9,
-  ),
-  Post(
-    id: '566',
-    user: users[1],
-    text:
-        'Omar al-Mukhtar (d.1931), The Lion of the Desert teaching Qur\'an at his home. Omar was an Islamic scholar and revolutionary who heroically led the resistance against the Italian occupation of Libya for almost 20 years. May God have mercy on his soul.',
-    postDate: DateTime(2021, 8, 11, 17, 0),
-    likers: [users[0]],
-    comments: 79,
-    shares: 18,
-  ),
-  Post(
-    id: '005645',
-    user: users[0],
-    text: 'ثلاثة أشياء وصفها الله بالجمال',
-    postDate: DateTime(2017, 9, 7, 17, 30),
-    imageUrl: [
-      'https://cdn.meetoor.com/media/media/PostsFiles/Meetoor_fervsxilbvyghgrqzmod.jpg',
-      'https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-    ],
-    likers: [users[1], users[4], users[0], users[3], users[2]],
-    comments: 184,
-    shares: 96,
-  ),
-  Post(
-    id: '216a1sd',
-    user: users[2],
-    text: 'This is a very good boi.',
-    postDate: DateTime(2021, 9, 11, 17, 0),
-    imageUrl: [
-      'https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
-    ],
-    likers: [],
-    comments: 201,
-    shares: 27,
-  ),
-  Post(
-    id: 'asdq',
-    user: users[3],
-    text: 'Adventure 🏔',
-    postDate: DateTime(2020, 3, 3, 3, 45),
-    imageUrl: [
-      'https://images.unsplash.com/photo-1573331519317-30b24326bb9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-    ],
-    likers: [users[5], users[7], users[3], currentUser],
-    comments: 183,
-    shares: 42,
-  ),
+final List<List<Post>> posts = [
+  [
+    Post(
+      id: '123',
+      user: users[4],
+      text:
+          'Hello, everyone. I need help for the Arabic translation of an English  sentence:\n"It\'s one thing to think you\'re on the right path, but it\'s another to think that yours is the only path\" \nMy proposal: \n \"شيء أن ترى أنك في الطريق الصحيح، وشيء آخر أن ترى أن طريقك هو الطريق الوحيد\" \n Is it OK\?',
+      postDate: DateTime(2021, 9, 11, 20, 33),
+      likers: [users[0], users[3]],
+      comments: 37,
+      shares: 9,
+    ),
+    Post(
+      id: '566',
+      user: users[1],
+      text:
+          'Omar al-Mukhtar (d.1931), The Lion of the Desert teaching Qur\'an at his home. Omar was an Islamic scholar and revolutionary who heroically led the resistance against the Italian occupation of Libya for almost 20 years. May God have mercy on his soul.',
+      postDate: DateTime(2021, 8, 11, 17, 0),
+      likers: [users[0]],
+      comments: 79,
+      shares: 18,
+    ),
+    Post(
+      id: '005645',
+      user: users[0],
+      text: 'ثلاثة أشياء وصفها الله بالجمال',
+      postDate: DateTime(2017, 9, 7, 17, 30),
+      imageUrl: [
+        'https://cdn.meetoor.com/media/media/PostsFiles/Meetoor_fervsxilbvyghgrqzmod.jpg',
+        'https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+      ],
+      likers: [users[1], users[4], users[0], users[3], users[2]],
+      comments: 184,
+      shares: 96,
+    ),
+    Post(
+      id: '216a1sd',
+      user: users[2],
+      text: 'This is a very good boi.',
+      postDate: DateTime(2021, 9, 11, 17, 0),
+      imageUrl: [
+        'https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
+      ],
+      likers: [],
+      comments: 201,
+      shares: 27,
+    ),
+    Post(
+      id: 'asdq',
+      user: users[3],
+      text: 'Adventure 🏔',
+      postDate: DateTime(2020, 3, 3, 3, 45),
+      imageUrl: [
+        'https://images.unsplash.com/photo-1573331519317-30b24326bb9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+      ],
+      likers: [users[5], users[7], users[3], currentUser],
+      comments: 183,
+      shares: 42,
+    ),
 
-  // Post(
-  //   user: onlineUsers[9],
-  //   caption: 'A classic.',
-  //   timeAgo: '1d',
-  //   imageUrl:
-  //       'https://images.unsplash.com/reserve/OlxPGKgRUaX0E1hg3b3X_Dumbo.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-  //   likes: 1523,
-  //   shares: 129,
-  //   comments: 301,
-  // )
+    // Post(
+    //   user: onlineUsers[9],
+    //   caption: 'A classic.',
+    //   timeAgo: '1d',
+    //   imageUrl:
+    //       'https://images.unsplash.com/reserve/OlxPGKgRUaX0E1hg3b3X_Dumbo.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+    //   likes: 1523,
+    //   shares: 129,
+    //   comments: 301,
+    // )
+  ],
+  [
+    Post(
+      id: '123',
+      user: users[4],
+      text:
+          'Hello, everyone. I need help for the Arabic translation of an English  sentence:\n"It\'s one thing to think you\'re on the right path, but it\'s another to think that yours is the only path\" \nMy proposal: \n \"شيء أن ترى أنك في الطريق الصحيح، وشيء آخر أن ترى أن طريقك هو الطريق الوحيد\" \n Is it OK\?',
+      postDate: DateTime(2021, 9, 11, 20, 33),
+      likers: [users[0], users[3]],
+      comments: 37,
+      shares: 9,
+    ),
+    Post(
+      id: '566',
+      user: users[1],
+      text:
+          'Omar al-Mukhtar (d.1931), The Lion of the Desert teaching Qur\'an at his home. Omar was an Islamic scholar and revolutionary who heroically led the resistance against the Italian occupation of Libya for almost 20 years. May God have mercy on his soul.',
+      postDate: DateTime(2021, 8, 11, 17, 0),
+      likers: [users[0]],
+      comments: 79,
+      shares: 18,
+    ),
+    Post(
+      id: '005645',
+      user: users[0],
+      text: 'ثلاثة أشياء وصفها الله بالجمال',
+      postDate: DateTime(2017, 9, 7, 17, 30),
+      imageUrl: [
+        'https://cdn.meetoor.com/media/media/PostsFiles/Meetoor_fervsxilbvyghgrqzmod.jpg',
+        'https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+      ],
+      likers: [users[1], users[4], users[0], users[3], users[2]],
+      comments: 184,
+      shares: 96,
+    ),
+    Post(
+      id: '216a1sd',
+      user: users[2],
+      text: 'This is a very good boi.',
+      postDate: DateTime(2021, 9, 11, 17, 0),
+      imageUrl: [
+        'https://images.unsplash.com/photo-1575535468632-345892291673?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
+      ],
+      likers: [],
+      comments: 201,
+      shares: 27,
+    ),
+    Post(
+      id: 'asdq',
+      user: users[3],
+      text: 'Adventure 🏔',
+      postDate: DateTime(2020, 3, 3, 3, 45),
+      imageUrl: [
+        'https://images.unsplash.com/photo-1573331519317-30b24326bb9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+      ],
+      likers: [users[5], users[7], users[3], currentUser],
+      comments: 183,
+      shares: 42,
+    ),
+    Post(
+      id: 'qweq',
+      user: users[1],
+      text: 'A classic.',
+      postDate: DateTime(2020, 3, 3, 3, 45),
+      imageUrl: [
+        'https://images.unsplash.com/reserve/OlxPGKgRUaX0E1hg3b3X_Dumbo.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+      ],
+      likers: [users[5], users[7], users[3], currentUser],
+      shares: 129,
+      comments: 301,
+    )
+  ]
 ];

@@ -1,4 +1,4 @@
-import 'package:feedbook/app_snackbar.dart';
+import 'package:feedbook/ui/app_snackbar.dart';
 import 'package:feedbook/core/models/models.dart';
 import 'package:feedbook/ui/widgets/widgets.dart';
 import 'package:flutter/foundation.dart';

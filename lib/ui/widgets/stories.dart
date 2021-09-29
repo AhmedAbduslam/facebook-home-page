@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:feedbook/core/models/models.dart';
-import 'package:feedbook/ui/colors.dart';
-import 'package:feedbook/app_snackbar.dart';
+import 'package:feedbook/ui/app_colors.dart';
+import 'package:feedbook/ui/app_snackbar.dart';
 import 'package:feedbook/ui/widgets/widgets.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -20,22 +20,16 @@ class Stories extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(vertical: 10.0),
+          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
           height: 220.0,
           color: kIsWeb ? Colors.transparent : Colors.white,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 1 + stories.length,
             itemBuilder: (context, index) {
-              if (index == 0) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
-                  child: _StoryCard(
-                    isAddStory: true,
-                    currentUser: currentUser,
-                  ),
-                );
-              }
+              if (index == 0)
+                return _StoryCard(isAddStory: true, currentUser: currentUser);
+
               final Story story = stories[index - 1];
               return Padding(
                 padding: const EdgeInsets.only(left: 14.0),

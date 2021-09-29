@@ -1,4 +1,5 @@
 import 'package:feedbook/core/models/models.dart';
+import 'package:feedbook/ui/app_colors.dart';
 import 'package:feedbook/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class ContactsList extends StatelessWidget {
                 child: Text(
                   'Contacts',
                   style: TextStyle(
-                    color: Colors.grey[600],
+                    color: AppColors.grey,
                     fontSize: 18.0,
                     fontWeight: FontWeight.w500,
                   ),
@@ -27,12 +28,12 @@ class ContactsList extends StatelessWidget {
               ),
               Icon(
                 Icons.search,
-                color: Colors.grey[600],
+                color: AppColors.grey,
               ),
               const SizedBox(width: 8.0),
               Icon(
                 Icons.more_horiz,
-                color: Colors.grey[600],
+                color: AppColors.grey,
               ),
             ],
           ),
