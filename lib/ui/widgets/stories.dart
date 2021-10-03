@@ -20,7 +20,7 @@ class Stories extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
           height: 220.0,
           color: kIsWeb ? Colors.transparent : Colors.white,
           child: ListView.builder(

@@ -9,6 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NavScreen extends StatelessWidget {
   final _scrollController = ScrollController();
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {

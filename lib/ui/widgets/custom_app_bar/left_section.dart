@@ -7,14 +7,12 @@ class LeftSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          height: double.infinity,
-          child: FaIcon(
-            FontAwesomeIcons.facebook,
-            color: AppColors.faceBlue,
-          ),
+        FaIcon(
+          FontAwesomeIcons.facebook,
+          color: AppColors.faceBlue,
+          size: 35,
         ),
-        SizedBox(width: 5.0),
+        SizedBox(width: 8.0),
         Expanded(
           child: TextField(
             decoration: InputDecoration(

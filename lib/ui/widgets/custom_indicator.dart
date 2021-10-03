@@ -24,6 +24,7 @@ class CustomIndicatorState extends State<CustomIndicator> {
           height: 440.0,
           child: ImageScrollView(
             imageUrls: widget.imageUrls,
+            onPageChanged: (index) => setState(() => currentPos = index),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -75,6 +76,7 @@ class DetailScreen extends StatelessWidget {
       body: ImageScrollView(
         imageUrls: imageUrls,
         onTap: onTap,
+        isFullScreen: true,
       ),
     );
   }
@@ -85,17 +87,20 @@ class ImageScrollView extends StatelessWidget {
     required this.imageUrls,
     this.onTap,
     this.isFullScreen = false,
+    this.onPageChanged,
   });
 
   final List<String> imageUrls;
   final void Function()? onTap;
   final bool isFullScreen;
+  final void Function(int)? onPageChanged;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: PageView.builder(
+        onPageChanged: onPageChanged,
         scrollDirection: Axis.horizontal,
         itemCount: imageUrls.length,
         itemBuilder: (context, index) {

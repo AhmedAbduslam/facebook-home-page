@@ -19,8 +19,8 @@ class MidSection extends StatelessWidget {
             width: 3.0,
           ),
         )),
-        tabs: List.generate(
-            Constants.icons.length, (i) => Tab(icon: Icon(Constants.icons[i]))),
+        tabs: List.generate(Constants.webIcons.length,
+            (i) => Tab(icon: Icon(Constants.webIcons[i]))),
       ),
     );
   }
